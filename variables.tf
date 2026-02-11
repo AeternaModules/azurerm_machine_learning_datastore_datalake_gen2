@@ -23,7 +23,7 @@ EOT
     client_id             = optional(string)
     client_secret         = optional(string)
     description           = optional(string)
-    service_data_identity = optional(string, "None")
+    service_data_identity = optional(string) # Default: "None"
     tags                  = optional(map(string))
     tenant_id             = optional(string)
   }))
