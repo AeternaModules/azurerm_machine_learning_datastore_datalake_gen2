@@ -1,3 +1,7 @@
+output "machine_learning_datastore_datalake_gen2s_id" {
+  description = "Map of id values across all machine_learning_datastore_datalake_gen2s, keyed the same as var.machine_learning_datastore_datalake_gen2s"
+  value       = { for k, v in azurerm_machine_learning_datastore_datalake_gen2.machine_learning_datastore_datalake_gen2s : k => v.id }
+}
 output "machine_learning_datastore_datalake_gen2s_authority_url" {
   description = "Map of authority_url values across all machine_learning_datastore_datalake_gen2s, keyed the same as var.machine_learning_datastore_datalake_gen2s"
   value       = { for k, v in azurerm_machine_learning_datastore_datalake_gen2.machine_learning_datastore_datalake_gen2s : k => v.authority_url }
