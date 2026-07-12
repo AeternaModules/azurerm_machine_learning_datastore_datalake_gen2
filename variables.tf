@@ -9,6 +9,8 @@ Optional:
     - authority_url
     - client_id
     - client_secret
+    - client_secret_key_vault_id (alternative to client_secret - read from Key Vault instead)
+    - client_secret_key_vault_secret_name (alternative to client_secret - read from Key Vault instead)
     - description
     - service_data_identity
     - tags
@@ -16,16 +18,18 @@ Optional:
 EOT
 
   type = map(object({
-    name                  = string
-    storage_container_id  = string
-    workspace_id          = string
-    authority_url         = optional(string)
-    client_id             = optional(string)
-    client_secret         = optional(string)
-    description           = optional(string)
-    service_data_identity = optional(string) # Default: "None"
-    tags                  = optional(map(string))
-    tenant_id             = optional(string)
+    name                                = string
+    storage_container_id                = string
+    workspace_id                        = string
+    authority_url                       = optional(string)
+    client_id                           = optional(string)
+    client_secret                       = optional(string)
+    client_secret_key_vault_id          = optional(string)
+    client_secret_key_vault_secret_name = optional(string)
+    description                         = optional(string)
+    service_data_identity               = optional(string) # Default: "None"
+    tags                                = optional(map(string))
+    tenant_id                           = optional(string)
   }))
 }
 
