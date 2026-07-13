@@ -27,7 +27,7 @@ EOT
     client_secret_key_vault_id          = optional(string)
     client_secret_key_vault_secret_name = optional(string)
     description                         = optional(string)
-    service_data_identity               = optional(string) # Default: "None"
+    service_data_identity               = optional(string)
     tags                                = optional(map(string))
     tenant_id                           = optional(string)
   }))
